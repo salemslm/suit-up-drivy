@@ -2,21 +2,64 @@
 <html>
   <head>
     <title>CSS/HTML Workshop with Drivy</title>
+    <!-- Material Design Lite -->
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="DrivyHomePage.css">
+
   </head>
-  <body>
-    <div id="car">
-      <input class="model" type="text" placeholder="Car model"/>
-      <input class="price-by-day" type="number" placeholder="Price by day"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
+  <body class="mdl-color--grey-100">
+
+    <div id="car" class="mdl-card mdl-shadow--2dp">
+
+      <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input model" type="text"/>
+          <label class="mdl-textfield__label" >Car Model</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input price-by-day" type="number"/>
+        <label class="mdl-textfield__label" >Price by day</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input price-by-km" type="number"/>
+        <label class="mdl-textfield__label" for="username">Price by km</label>
+      </div>
+                  </form>
+      </div>
+
     </div>
-    <div id="rental">
-      <input class="begin" type="date" placeholder="Rental begin date"/>
-      <input class="end" type="date" placeholder="Rental end date"/>
-      <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
+    <div id="rental" class="mdl-card mdl-shadow--2dp">
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input begin" type="date" onfocus="this.placeholder = ''"/>
+        <label class="mdl-textfield__label" for="username">Rental begin date</label>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input end" type="date" onfocus="this.placeholder = ''"/>
+        <label class="mdl-textfield__label" for="username">Rental end date</label>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input distance" type="text" onfocus="this.placeholder = ''"/>
+        <label class="mdl-textfield__label" for="username">distance in km</label>
+      </div>
+      <div class = "">
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox">
+     <input class="mdl-checkbox__input option" type="checkbox" id="checkbox">
+     <span class="mdl-checkbox__label">Franchise</span>
+        </label>
+      </div>
+
     </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
+
+
+    <button id="compute" class="mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+      <i class="material-icons">COMPUTE</i>
+    </button>
+    <div id="actors" class="mdl-layout"></div>
     <script id="template" type="x-tmpl-mustache">
       {{#actors}}
         <div class="actor">
@@ -29,5 +72,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
     <script src="drivy.js"></script>
     <script src="index.js"></script>
-  </body>
+
+
+      </body>
 </html>
