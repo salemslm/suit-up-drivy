@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CSS/HTML Workshop with Drivy</title>
+    <title>Drivy</title>
     <!-- Material Design Lite -->
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <link rel="stylesheet" href="DrivyHomePage.css">
-
+    <link rel="shortcut icon" href="favicon.ico">
   </head>
   <body class="mdl-color--grey-100">
-
+    
     <div id="car" class="mdl-card mdl-shadow--2dp">
 
       <div class="mdl-textfield mdl-js-textfield">
@@ -55,20 +55,33 @@
 
     </div>
 
-
     <button id="compute" class="mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
       <i class="material-icons">COMPUTE</i>
     </button>
-    <div id="actors" class="mdl-layout"></div>
-    <script id="template" type="x-tmpl-mustache">
-      {{#actors}}
-        <div class="actor">
-          <span>{{who}}</span>
-          <span>{{type}}</span>
-          <span>{{amount}}</span>
-        </div>
-      {{/actors}}
-    </script>
+
+
+
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Your price</h2>
+      </div>
+
+        <div id="actors" class="mdl-layout"></div>
+        <script id="template" type="x-tmpl-mustache">
+          {{#actors}}
+            <div class="actor">
+              <span>{{who}}</span>
+              <span>{{type}}</span>
+              <span>{{amount}}</span>
+            </div>
+          {{/actors}}
+        </script>
+
+    </div>
+
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
     <script src="drivy.js"></script>
     <script src="index.js"></script>
